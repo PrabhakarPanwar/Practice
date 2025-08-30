@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    .hovercard {
+        width: 350px;
+        height: 500px;
+        perspective: 1000px;
+    }
+
+    /* .info{
+        background-image: url(../img/demonslayer.jpg);
+        background-position: center;
+        background-size: cover;
+        s
+
+    } */
+
+    .card {
+        flex-direction: column;
+        gap: 10px;
+        transform-style: preserve-3d;
+        transition: 0.5s;
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+
+
+
+    .hovercard:hover .card {
+        transform: rotateY(180deg);
+    }
+
+
+    .title {
+        background-color: brown;
+    }
+
+    .info {
+        transform: rotateY(180deg);
+        color: red;
+        background-color: aquamarine;
+    }
+
+    .title,
+    .info {
+        backface-visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
+    }
+</style>
+
+<body>
+    <div class="container flex">
+        <div class="hovercard ">
+            <div class="card flex">
+                <!-- <img src="../img/demonslayer.jpg" alt=""> -->
+                <div class="title">
+                    <h1>Kimetsu No Yaiba</h1>
+                </div>
+                <div class="info">
+                    <p>Demon Slayer refers to a popular Japanese manga and anime franchise titled Demon Slayer: Kimetsu
+                        no Yaiba.</p>
+                    <p>It follows Tanjiro Kamado, who joins the Demon Slayer Corps to avenge his family and cure his
+                        sister, who was turned into a demon.</p>
+                    <p>The series is known for its animated visuals, exciting fight scenes, and compelling story, and
+                        includes a manga, a TV anime series, and several successful films, with a continued movie
+                        trilogy planned.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
