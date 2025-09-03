@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font CDN  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+    <!-- Bootstrap CDN  -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Swiper Css & Js  -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="swiper.js">
+
+    <link rel="stylesheet" href="head&foot.css">
+
+    <title>Home</title>
+
+</head>
+
+<style>
+
+    .absol {
+        position: sticky;
+        z-index: 3;
+        top: 90%;
+    }
+
+    .stick {
+        background-image: url(https://img.icons8.com/?size=100&id=BkugfgmBwtEI&format=png&color=000000);
+        background-size: cover;
+        position: absolute;
+        cursor: pointer;
+        left: 95%;
+        height: 50px;
+        width: 50px;
+    }
+
+    /* Bootstrap carousel */
+
+    .carousel-inner img {
+        height: 60vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Transform */
+
+    .board {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardboard {
+        width: 50%;
+        height: 15vh;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        font-size: 2rem;
+        background-color: #f2155096;
+        color: white;
+    }
+
+    .cardboard p {
+        font-size: 1rem;
+    }
+
+    /* About */
+
+    .about {
+        margin-top: 8rem;
+    }
+
+    .about img {
+        height: 500px;
+        width: 500px;
+        object-fit: cover;
+        border: 5px solid #dc3b66;
+        border-radius: 50%;
+        padding: 0;
+    }
+
+    /* Grid  */
+
+    .grid {
+        background-color: #eeeeee;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .back {
+        width: 370px;
+        height: 250px;
+        border-radius: 10px;
+        padding: 0;
+        perspective: 1000;
+        overflow: hidden;
+    }
+
+    .grid img {
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+    /* grid rotate */
+
+
+    .cen {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: 0.5s;
+        position: relative;
+    }
+
+    .cen h2 {
+        position: absolute;
+        top: 40%;
+        right: 30%;
+        color: white;
+        font-weight: 900;
+    }
+
+    .info {
+        transform: rotateY(180deg);
+        color: white;
+        background-color: black;
+    }
+
+    .title,
+    .info {
+        backface-visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .back:hover .cen {
+        transform: rotateY(180deg);
+    }
+
+
+    /* Another About */
+
+    .pad {
+        padding: 3.5rem 8.5rem;
+    }
+
+    .loo {
+        background-color: #cb1643;
+        padding: 20px 10px;
+    }
+
+    .loo img {
+        height: 300px;
+        width: 250px;
+    }
+
+    .text button {
+        text-decoration: underline;
+        background-color: transparent;
+        width: 15%;
+    }
+
+    .text h6,
+    button {
+        font-weight: 700;
+    }
+
+    /* Photo Gallery */
+
+    .gallery img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .gallery .ok:hover {
+        scale: 1.2;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="container-fluid p-0">
+
+        <!-- sticky icon  -->
+
+        <div class="absol">
+            <div class="stick"></div>
+        </div>
+
+        <!-- Header Image Section  -->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid justify-content-evenly color">
+                <img src="./logo.jpg" alt="Mother's Pride">
+                <h1>Be What You Want To Be</h1>
+                <div class="contact">
+                    <p><i class="fa-solid fa-phone me-1"></i>+1234567890</p>
+                    <p><i class="fa-solid fa-envelope me-2"></i>gmail@.com</p>
+                    <button>Enquiry Form</button>
+                </div>
+            </div>
+        </nav>
+
+        <!--Header Dropdown Section  -->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid backcolor">
+                <div class="icon ms-5">
+                    <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="navbar-brand" href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="navbar-brand" href="#"><i class="fa-solid fa-blog"></i></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-5 hvr">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="facilities.html">Facilities</a>
+                        </li>
+                        <li class="nav-item open">
+                            <a class="nav-link " href="#">Event<i class="fa-solid fa-angle-down"></i></a>
+                            <div class="dropdown">
+                                <a class="dropdown-item p-2" href="#">Action</a>
+                                <a class="dropdown-item p-2" href="#">Another action</a>
+                                <a class="dropdown-item p-2" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item open">
+                            <a class="nav-link " href="#">About Us<i class="fa-solid fa-angle-down"></i></a>
+                            <div class="dropdown">
+                                <a class="dropdown-item p-2" href="#">Action</a>
+                                <a class="dropdown-item p-2" href="#">Another action</a>
+                                <a class="dropdown-item p-2" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item open">
+                            <a class="nav-link " href="#">Curriculum<i class="fa-solid fa-angle-down"></i></a>
+                            <div class="dropdown">
+                                <a class="dropdown-item p-2" href="#">Action</a>
+                                <a class="dropdown-item p-2" href="#">Another action</a>
+                                <a class="dropdown-item p-2" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Student Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Swiper -->
+        <!-- <div class="boxx">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../../img/card1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../../img/card2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../../img/card3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../../img/card4.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div> -->
+
+        <!-- Bootstrap carousel  -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../img/card1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../img/card2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../img/card3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Transform -->
+        <div class="board">
+            <div class="cardboard d-flex justify-content-evenly align-items-center">
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2"><i
+                        class="fa-solid fa-school"></i>
+                    <p>Since 2025</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2"> <i
+                        class="fa-brands fa-google-scholar"></i>
+                    <p>150,000+ Happy Student</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2"> <i
+                        class="fa-solid fa-person-chalkboard"></i>
+                    <p>110 Schools</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2"> <i
+                        class="fa-solid fa-award"></i>
+                    <p>Awards Won 100+</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About  -->
+        <div class="about mb-5">
+            <div class="row d-flex align-items-center text-center">
+                <div class="col-6">
+                    <img src="./about.jpg" alt="">
+                </div>
+                <div class="col-4">
+                    <h2>Mother’s Pride Pataudi Welcomes You All</h2>
+                    <p>Selecting a school for your child is never easy process for every parent and it the the first and
+                        the
+                        foremost step in process of enrolling your child into a best school in Pataudi i.e. Mother’s
+                        Pride
+                        Pataudi, we believe in giving children an environment where their dreams can flourish in the
+                        best
+                        way possible, and that is why we are ranked the best cbse and play school in Pataudi, Gurgaon.
+                        We've
+                        crafted our classes in a way to motivate each child to develop, learn, and concentrate on their
+                        overall growth, equipping them to tackle life with confidence and resolve.<br>
+
+                        From playgroup to Class XII, this CBSE affiliated school near Gurugram gives students the
+                        opportunity to study hard and participate in a number of valuable extracurricular activities.
+                        For
+                        those who're looking for an affordable school in Pataudi or a top CBSE school in Pataudi,
+                        Gurgaon,
+                        with all modern facilities, look no further <span style="color: #f32a5f; font-weight: 800;">
+                            “Mother'S Pride School”</span> has everything.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid -->
+
+        <div class="grid text-center d-flex flex-column justify-content-center align-items-center gap-4">
+            <div class="row d-flex gap-4">
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/bo2.jpg" alt="">
+                            <h2>Black ops 2</h2>
+                        </div>
+                        <div class="info p-3">
+                            <h3>From Activision</h3>
+                            <ul>
+                                <li>Call of Duty: Black Ops II is a 2012 first-person shooter game developed by Treyarch
+                                    and
+                                    published by Activision</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/bo3.jpg" alt="">
+                            <h2> Black ops 3</h2>
+                        </div>
+                        <div class="info p-3">
+                            <h3>From Activision</h3>
+                            <ul>
+                                <li>Call of Duty: Black Ops III is a 2015 first-person shooter game developed by
+                                    Treyarch and
+                                    published by Activision. </li>
+                                <li>It is the twelfth entry in the Call of Duty series and the
+                                    sequel to the 2012 video game Call of Duty: Black Ops II. </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/bo4.png" alt="">
+                            <h2>Black ops 4</h2>
+                        </div>
+                        <div class="info p-3 ">
+                            <h3>From Activision</h3>
+                            <ul>
+                                <li>Call of Duty: Black Ops 4 is a 2018 first-person shooter game developed by Treyarch
+                                    and
+                                    published by Activision. </li>
+                                <li>It is the fifteenth installment of the Call of Duty series and
+                                    the fifth entry in the Black Ops sub-series, following Call of Duty: Black Ops III.
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row d-flex gap-4">
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/bo5.jpg" alt="">
+                            <h2>Black ops 5</h2>
+                        </div>
+                        <div class="info p-3">
+                            <h3>From Activision</h3>
+                            <ul>
+                                <li>Call of Duty: Black Ops Cold War is a 2020 first-person shooter game co-developed by
+                                    Treyarch and Raven Software and published by Activision.</li>
+                                <li>It is the seventeenth
+                                    installment of the Call of Duty series, following Call of Duty: Black Ops 4.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/bo6.jpg" alt="">
+                            <h2>Black ops 6</h2>
+                        </div>
+                        <div class="info p-3">
+                            <h3>From Activision</h3>
+                            <ul>
+                                <li>Call of Duty: Black Ops 6 is a 2024 first-person shooter video game co-developed by
+                                    Treyarch and Raven Software and published by Activision. </li>
+                                <li>It is the twenty-first installment of the Call of Duty series,following Call of
+                                    Duty: Black Ops Cold War.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/game3.jpeg" alt="">
+                            <h2>DMC V</h2>
+
+                        </div>
+                        <div class="info p-3">
+                            <h3>From Capcom</h3>
+                            <ul>
+                                <li>Devil May Cry 5 is a 2019 action-adventure game developed and published by Capcom.
+                                </li>
+                                <li>The
+                                    game is the sixth installment overall and the fifth mainline installment in the
+                                    Devil
+                                    May Cry series.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row d-flex gap-4">
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/game4.jpg" alt="">
+                            <h2>Darksider</h2>
+
+                        </div>
+                        <div class="info p-3">
+                            <h3>From Vigil Games</h3>
+                            <ul>
+                                <li>Darksiders is a hack and slash action-adventure video game franchise created by
+                                    Vigil
+                                    Games, now developed by Gunfire Games, which consists of some of the original
+                                    members of
+                                    Vigil.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/game6.jpg" alt="">
+                            <h2>Ghostrunner</h2>
+                        </div>
+                        <div class="info p-3">
+                            <h3>3D Realms</h3>
+                            <ul>
+                                <li>Ghostrunner is a 2020 action platform video game co-developed by One more Level and
+                                    Slipgate Ironworks, produced by 3D Realms, and co-published by 505 Games and All in!
+                                    Games.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back col-4 ">
+                    <div class="cen">
+                        <div class="title">
+                            <img src="../../img/game7.jpg" alt="">
+                            <h2>Genshin</h2>
+                        </div>
+                        <div class="info p-3">
+                            <h3>From HoYoverse</h3>
+                            <ul>
+                                <li>Genshin Impact is a 2020 action role-playing game produced by
+                                    MiHoYo/HoYoverse. </li>
+                                <li>The game features an anime-style open world environment and an
+                                    action-based battle system using elemental magic and character-switching.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Another About  -->
+        <div class="spce bg-white py-4">
+            <div class="row backcolor pad">
+                <div class="loo d-flex">
+                    <div class="col-3">
+                        <img src="../../img/dragonballz.jpg" alt="">
+                    </div>
+                    <div class="col-8">
+                        <div class="text d-flex flex-column gap-3">
+                            <h6>Mr.ABCDEFGH</h6>
+                            <h6>(Principal)</h6>
+                            <p>As the principal of Mother’s Pride School, she has been serving in the field of education
+                                for
+                                several
+                                years
+                                and has a keen interest in the mental and emotional growth of students. She feels that
+                                every
+                                child
+                                should
+                                have a simple, enjoyable, and meaningful learning experience. Her vision puts forward
+                                the
+                                idea
+                                of
+                                children
+                                learning profound concepts in an enjoyable and easily comprehensible manner. Every
+                                student
+                                at
+                                Mother’s
+                                Pride
+                                School is encouraged to learn inquisitively, confidently, and joyfully because of her
+                                leadership
+                                qualities.
+                            </p>
+                            <button>Read More --</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery -->
+
+        <div class="gallery d-flex flex-column gap-3 justify-content-center align-items-center"
+            style="background-color: #eaeaea; height: 80vh;">
+            <h2 style="color: #ee0a47;">Photo Gallery</h2>
+            <div class="photo d-flex gap-4" style="width: 80%;height:25vh;">
+                <div class="ok bg-white p-2 " style="width: 18rem;transition: 0.5s; border-radius:10px;">
+                    <img src="../../img/game1.jpg" alt="...">
+                </div>
+                <div class="ok bg-white p-2 " style="width: 18rem;transition: 0.5s; border-radius:10px;">
+                    <img src="../../img/game2.jpeg" alt="...">
+                </div>
+                <div class="ok bg-white p-2 " style="width: 18rem;transition: 0.5s; border-radius:10px;">
+                    <img src="../../img/game3.jpeg" alt="...">
+                </div>
+                <div class="ok bg-white p-2 " style="width: 18rem;transition: 0.5s; border-radius:10px;">
+                    <img src="../../img/game4.jpg" alt="...">
+                </div>
+                <div class="ok bg-white p-2 " style="width: 18rem;transition: 0.5s; border-radius:10px;">
+                    <img src="../../img/game5.jpg" alt="...">
+                </div>
+                <div class="ok bg-white p-2 " style="width: 18rem;transition: 0.5s; border-radius:10px;">
+                    <img src="../../img/game6.jpg" alt="...">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section  -->
+
+    <footer>
+        <div class=" spce bg-white py-4">
+            <div class="row pad">
+                <div class="col-4 gap-3">
+                    <div class="imagee"></div>
+                    <p style="width: 80%;">221, Ward No: 6, Opposite Govt. Hospital,
+                        Near Bharat petrol Pump, <br>
+                        Pataudi Road, Haily Mandi. <br>
+                        <strong>Dist:</strong> Gurgaon(Hr) <br>
+                        <strong>Pin No :</strong> 122504
+                    </p>
+                    <h6>CONTACT</h6>
+                    <div class="icon d-flex align-items-center" style="font-size: 1rem;">
+                        <p> <i class="fa-solid fa-phone me-2"></i>+123456789 , +1234567890</p>
+
+                    </div>
+                    <div class="icon d-flex align-items-center" style="font-size: 1rem;">
+
+                        <p><i class="fa-solid fa-envelope me-2"></i>ok@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-4 text-center keyf">
+                    <img src="./heart-white.png" style="height:300px;width: 300px;filter: opacity(0.30);" alt="">
+                    <h6 class="mt-5">The School Run by Om Ji Education Trust</h6>
+                </div>
+                <div class="col-4">
+                    <i style="font-size:1.2rem;font-weight: 700;">Nelson Mandela</i>
+                    <p>The creator of an apartheid-free South Africa and its first democratically elected
+                        president,
+                        and
+                        the 1993 Nobel Prize winner for peace, he is one of the most inspiring leaders the world
+                        has
+                        ever
+                        seen. A man of unwavering conviction who refused to compromise his political conviction
+                        and
+                        remained
+                        in prison to inspire a freedom movement for 26 long years.</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </footer>
+
+    </div>
+
+    <!-- Bootstrap Js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper Js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+</body>
+
+</html>
